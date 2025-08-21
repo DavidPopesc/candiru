@@ -175,6 +175,7 @@ export class TouchInputHandler {
 	}
 
 	private getPixelRatio(): number {
-		return 200 / globalThis.innerHeight;
+		//return 200 / globalThis.innerHeight; on mobile the touch is slightly distorted with this, let's try 1 instead
+		return 1 / globalThis.innerHeight;
 	}
 }
